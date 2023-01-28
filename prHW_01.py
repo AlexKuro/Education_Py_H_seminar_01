@@ -1,6 +1,26 @@
 import random
 import math
 
+def task_1():  # Задача 1
+    """   Напишите программу, которая принимает на вход цифру, 
+    обозначающую день недели, и проверяет, является ли этот день выходным.
+    Пример:
+      - 6 -> да
+      - 7 -> да
+      - 1 -> нет """
+
+    print('\n   - - - - -Задача 1 - - - - - -')
+    print('      Проверяем на входе цифру ')
+    print('и проверяем является введеный день недели выходным?')
+    number = random.randint(1, 7)
+    if number > 0 and number < 8:
+        if number > 0 and number < 6:
+            print(
+                f" {number} -> нет, {Week(number)} это будний день. Пора на работу!")
+        elif number == 6 or number == 7:
+            print(f" {number} -> да, {Week(number)} это выходной день. Нужен отдых!")
+    else:
+        print("Ввод неверный!")
 
 def task2():  # Задача 2
     """ Напишите программу для. проверки истинности утверждения 
@@ -108,7 +128,24 @@ def task5():  # Задача 5
     print(f"{distancePoint2D(pointA, pointB)}")
     print()
 
+    
+def Week(num):
+    if num == 1:
+        return "Понедельник"
+    if num == 2:
+        return "Вторник"
+    if num == 3:
+        return "Среда"
+    if num == 4:
+        return "Четверг"
+    if num == 5:
+        return "Пятница"
+    if num == 6:
+        return "Суббота"
+    if num == 7:
+        return "Воскресенье"
 
+    
 def distancePoint2D(pointA, pointB):
     """ 
     Функция вычисления расстояния между двумя точками в 2D пространстве
@@ -164,8 +201,8 @@ def pointsQuaters(quater):
         return 'x = 0 и y = 0'
 
 
-# task1()
-task2()
-task3()
-task4()
-task5()
+task1() # Задача 1
+task2() # Задача 2
+task3() # Задача 3
+task4() # Задача 4
+task5() # Задача 5
